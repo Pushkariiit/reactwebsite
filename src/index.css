@@ -278,7 +278,7 @@ button
 
 /* TodoList CSS File */
 
-*{margin:0;padding:0;box-sizing:border-box;}
+/* *{margin:0;padding:0;box-sizing:border-box;}
 
 *{
     box-sizing:border-box;
@@ -310,9 +310,11 @@ button
 h1{
     color:white;
     background:transparent;
+    font-size: 50px;
     background-color: #8566aa;
     padding:6px 0 2px 0;
     margin-bottom:10px;
+    width: 100%;
     box-shadow:5px 5px 15px -5px rgba(0,0,0,0.3);
 }
 
@@ -347,12 +349,17 @@ button{
 
 button:hover{
     background-color: #20bf6b;
+} */
+/* .btn_green:hover{
+  color: #20bf6b;
 }
-
-ol{
+.btn_red:hover{
+  color: red;
+} */
+/* ol{
     margin-top:30px; 
-}
-
+} */
+/* 
 ol li{
     padding-left:0px;
     text-align:left;
@@ -416,5 +423,66 @@ button {
     width: 40px;
     color:#fff;
     font-size:30px;
+    align-items: center;
 
+}
+
+.btn_div{
+  width: 100%;
+  display :flex;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+/* .poke{
+  margin-left:750px ;
+  margin-top: 25px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: aquamarine;
+  text-align: center;
+  color: brown;
+  box-shadow: #6983aa;
+}
+.heading{
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: -10px;
+  text-align: center;
+  background-color:violet;
+}
+body{
+  background-color:cadetblue
+}
+
+.active_comp{
+  color:red;
+} */
+
+a.active_class{
+  color: rgb(0, 255, 110);
+  border-bottom: 1px solid red;
+} 
+
+.menu_style {
+  width: 100%;
+  line-height: 60px;
+  background-color: seagreen;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search_bar{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchbar_input{
+  margin :30px 0;
+  padding : 5px 10px;
+  border-radius: 5px;
+  
 }

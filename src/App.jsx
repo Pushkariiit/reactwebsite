@@ -370,71 +370,256 @@
 
 // TodoList 
 
-import React,{useState} from 'react';
-import ToDoLists from './ToDoLists';
+// import React,{useState} from 'react';
+// import ToDoLists from './ToDoLists';
 
-const App=()=>{
+// const App=()=>{
 
-    const[inputList,setInputList]=useState("");
-    const[Items,setItems] = useState([]);
+//     const[inputList,setInputList]=useState("");
+//     const[Items,setItems] = useState([]);
 
-    const itemEvent=(event)=>{
-        setInputList(event.target.value);
-    }
+//     const itemEvent=(event)=>{
+//         setInputList(event.target.value);
+//     }
 
-    const listOfItems=()=>{
+//     const listOfItems=()=>{
 
-        if(inputList != "")
-        {
-          setItems((oldItmes)=>{
-            return [...oldItmes, inputList]
-        });
+//         if(inputList != "")
+//         {
+//           setItems((oldItmes)=>{
+//             return [...oldItmes, inputList]
+//         });
 
-        // setItems((oldItmes)=>{
+//         // setItems((oldItmes)=>{
             
-        //     return [...oldItmes,inputList];
-        // });
-        setInputList("");
-    }};
+//         //     return [...oldItmes,inputList];
+//         // });
+//         setInputList("");
+//     }};
 
-    const deleteItems =(id)=>{
-        setItems((oldItmes)=>{
-            return oldItmes.filter((arrElements,index)=>{
-                return index!== id;
-            });
-        });
-    }
+//     const deleteItems =(id)=>{
+//         setItems((oldItmes)=>{
+//             return oldItmes.filter((arrElements,index)=>{
+//                 return index!== id;
+//             });
+//         });
+//     }
 
+//     return(
+//         <>
+//             <div className='main_div'>
+//                 <div className='center_div'>
+//                 <br/>
+//                 <h1>TodoList</h1>
+//                 <br/>
+                    
+//                     <input type='text' placeholder='Add Item' 
+//                         onChange={itemEvent}
+//                         value={inputList}
+//                     />
+//                     <button onClick={listOfItems}> + </button>
+
+//                     <ol>
+                        
+
+//                             {Items.map((itemval,index)=>{
+//                                 return(<ToDoLists 
+//                                 key={index} 
+//                                 id={index}
+//                                 text={itemval}
+//                                 onSelect={deleteItems}
+//                                 />)
+//                             })}
+                        
+//                     </ol>
+//                 </div>
+//             </div>
+//         </>
+//    );
+// }
+// export default App;
+
+// import React,{useState} from 'react';
+// // import AddIcon from '@mui/icons-material/Add';
+// import AddIcon from '@material-ui/icons/Add';
+// import DeleteIcon from '@material-ui/icons/Delete';
+// // import DeleteIcon from '@mui/icons-material/Delete';
+// import Button from '@material-ui/core/Button';
+// import { Tooltip } from '@material-ui/core';
+// import Clock from 'react-digital-clock';
+
+// const App=()=>{
+
+//     const[count,setCount]=useState(0);
+//     const inputEvent=()=>{
+//         setCount(count+1);
+//     }
+    
+   
+//     const inputEventtwo=()=>{
+//         if(count==0){
+//             return (
+//                 alert('Value can not be negative')
+//             )
+//         }
+//             setCount(count-1);
+            
+        
+        
+//     }
+//     return(
+//         <>
+//             <div className="main_div">
+//             <Clock />
+//                 <div className='center_div'>
+                
+//                     <h1>{count}</h1>
+//                     <div className='btn_div'>
+//                     <Tooltip title='Add' >
+//                     <Button onClick={inputEvent} className='btn_green'><AddIcon/></Button>
+//                     </Tooltip>
+//                     <Tooltip title='Delete' >
+//                     <Button onClick={inputEventtwo} className='btn_red'><DeleteIcon/></Button>
+//                     </Tooltip>
+//                     </div>
+
+//                 </div>
+//             </div>
+//         </>
+//     )
+// }
+// export default App;
+
+// import React from "react";
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// const App=()=>{
+//     return(
+//         <>
+//             <h1 className="text-center text-danger my-5">Welcome To My Website</h1>
+//             <div class="container">
+//   <div className="row">
+//     <div className="col-sm">
+//     <div className="card">
+//   <img className="card-img-top" src="https://picsum.photos/200/300" alt="Card image cap" height="200px"/>
+//   <div className="card-body">
+//     <h5 className="card-title">Card title</h5>
+//     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" className="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+
+//     </div>
+//     <div className="col-sm">
+//     <div className="card" >
+//   <img className="card-img-top" src="https://picsum.photos/201/300" alt="Card image cap" height='200px'/>
+//   <div className="card-body">
+//     <h5 className="card-title">Card title</h5>
+//     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" className="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+
+//     </div>
+//     <div className="col-sm">
+//     <div className="card" >
+//   <img className="card-img-top" src="https://picsum.photos/202/300" alt="Card image cap" height="200px"/>
+//   <div className="card-body">
+//     <h5 className="card-title">Card title</h5>
+//     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" className="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+
+//     </div>
+//   </div>
+// </div>
+//         </>
+//     )
+// }
+// export default App;
+
+// import React, { createContext } from "react";
+
+// import CompA from "./CompA";
+
+// const FirstName=createContext();
+// const LastName =createContext();
+
+// const App=()=>{
+//     return(
+//         <>
+//     <FirstName.Provider value ={"Pushkar"}>
+//     <LastName.Provider value={"Choudhary"}>
+
+//     <CompA/>
+//     </LastName.Provider>
+//     </FirstName.Provider>
+//     </>
+//     );
+// };
+// export default App;
+// export { FirstName,LastName };
+
+// import React,{useEffect, useState} from 'react';
+
+// const App=()=>{
+//     const [num,setNum]=useState(0);
+//     const [nums,setNums]=useState(0);
+    
+//     const inputEvent=()=>{
+//         setNum(num+1);
+        
+//     }
+//     const inputEventtwo=()=>{
+//         setNums(nums+1);
+        
+//     }
+
+//     useEffect(()=>{
+        
+//         document.title=`You clicked me ${num} times`;
+//     })
+//     return(
+//         <>
+//             <button onClick={inputEvent}>Click Me {num}</button>
+//             <button onClick={inputEventtwo}>Click Me {nums}</button>
+//         </>
+//     );
+// };
+
+// export default App;
+
+import React from 'react';
+import { Route,Routes,Navigate } from "react-router-dom";
+import About from './About';
+import Contact from './Contact';
+import Error from './Error';
+import Service from './Service';
+import Menu from './Menu';
+import User from './User';
+import Search from './Search';
+
+const Name=()=>{
+    return(
+        <h1>this is name page of contact page</h1>
+    )
+};
+function App(){
+    
     return(
         <>
-            <div className='main_div'>
-                <div className='center_div'>
-                <br/>
-                <h1>TodoList</h1>
-                <br/>
-                    
-                    <input type='text' placeholder='Add Item' 
-                        onChange={itemEvent}
-                        value={inputList}
-                    />
-                    <button onClick={listOfItems}> + </button>
-
-                    <ol>
-                        
-
-                            {Items.map((itemval,index)=>{
-                                return(<ToDoLists 
-                                key={index} 
-                                id={index}
-                                text={itemval}
-                                onSelect={deleteItems}
-                                />)
-                            })}
-                        
-                    </ol>
-                </div>
-            </div>
+        <Menu/>
+        <Routes>
+        <Route exact path="/" element={<About name="About"/>}></Route>
+        <Route exact path='/contact' element={<Contact/>}></Route>
+        <Route exact path='/search' element={<Search/>}></Route>
+        <Route exact path='/service' element={<Service/>}></Route>
+        <Route path='/contact/name' element={<Name/>}></Route>
+        <Route path='/user/:fname/:lname' element={<User/>}></Route>
+        {/* <Route path='*' element={<Error/>}></Route> */}
+        <Route path='*' element={<Navigate to="/"/>} />
+        </Routes>
         </>
-   );
+    );
 }
 export default App;
